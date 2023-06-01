@@ -1,0 +1,409 @@
+\documentclass[a4paper,11pt,oneside]{article}
+\usepackage[left=0.5in, right=0.5in, bottom=0.5in, top=0.5in]{geometry}
+\usepackage{setspace}
+\usepackage{ragged2e}
+
+% encoding, language
+\usepackage[utf8]{inputenc}
+% \usepackage{palatino}
+
+% colors
+\usepackage{color}
+\definecolor{myblue}{rgb}{0.094,0.22,0.627}
+
+% links
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    linkcolor = {myblue},
+    citecolor = {myblue},
+    urlcolor = {myblue}
+}
+
+% graphics
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{tikz}
+
+% icons (github)
+% \usepackage{fontspec}
+\usepackage{fontawesome}
+
+% enumeration
+\usepackage{enumitem}
+
+% tables
+\usepackage{tabularx}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{W}[1]{>{\hsize=#1\textwidth\raggedright\arraybackslash}X}
+\newcolumntype{R}[1]{>{\hsize=#1\textwidth\raggedleft\arraybackslash}X}
+\usepackage{booktabs}
+\newcommand{\tabitem}{~~\llap{\raisebox{0.0ex}{$\bullet$}}~~}
+\usepackage{multicol}
+\usepackage{makecell}
+\usepackage{threeparttable}
+
+% indentation
+\setlength\parindent{0pt}
+% \setlength{\parskip}{0pt}
+
+% page numbering
+\pagenumbering{gobble}
+
+% line break
+\sloppy
+
+% BEGIN ---------------------------------------------------------------------
+\begin{document}
+
+
+% PHOTO ---------------------------------------------------------------------
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,yshift=-6pt,xshift=-6pt]%
+        at (current page.north east)
+        {\includegraphics[scale=0.1]{../../ip-photo.jpg}};
+\end{tikzpicture}
+
+% NAME ----------------------------------------------------------------------
+\vspace{-18pt}
+\begin{center}
+    \LARGE{Igor Pozdeev}
+\end{center}
+
+% CONTACT INFO --------------------------------------------------------------
+\vspace{-18pt}
+\begin{center}
+    Clausiusstrasse 39a, 8006, Zürich, Switzerland \\[3pt]
+    % (\textit{Niederlassungsbewilligung C}) \\[6pt]
+    \faEnvelopeO \ igor.posdeev@gmail.com
+    \hspace{2pt}
+    \faPhone \ +41-78-612-0928
+    % \faPhone \ +1~347~305~4103
+    % \hspace{2pt}
+    \\[4pt]
+    \faHome \ \href{http://www.igorpozdeev.me}{website} 
+    \hspace{2pt}
+    \faGithub \ \href{https://github.com/ipozdeev}{github} 
+    \hspace{2pt}
+    \faStackExchange \ \href{https://quant.stackexchange.com/users/25674/igor-pozdeev}{stackexchange}
+\end{center}
+
+\vspace{6pt}
+
+\begin{tabularx}{\textwidth}{X}
+	Ph.D. graduate and industry professional with experience in a broad spectrum of quantitative activities, a deep interest in data science, strong coding skills and appreciation of scientific methods.
+\end{tabularx}
+
+% \vspace{6pt}
+
+% EXPERIENCE ----------------------------------------------------------------
+\vspace{18pt}
+\noindent 
+\begin{tabularx}{\textwidth}{L R{0.35} l@{ -- }R{0.07}}
+    \multicolumn{3}{l}{INDUSTRY EXPERIENCE} \\
+    \midrule \\[-10pt]
+    True Wealth & Quantitative investment manager & 06/2022 & present \\
+    \multicolumn{3}{l}{\textit{Zurich, Switzerland}}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{X}
+    \vspace{-18pt}
+        \begin{itemize}
+            \setlength\itemsep{-2pt}
+            \item implement portfolio optimization (Black-Litterman) algorithm used by $>$10000 clients;
+            \item design+implement integer optimization algorithm used internally for daily rebalancing;
+            \item conduct in-house research on investor behavior, systems efficiency, market liquidity and other topics; 
+            \item execute daily trading activities associated with rebalancing;
+            \item oversee selection of investment instruments.
+        \end{itemize}
+    \end{tabularx}
+
+\begin{tabularx}{\textwidth}{L R{0.3} l@{ -- }R{0.07}}    
+    ZZ Verm\"ogensberatung (Schweiz) AG & Senior research analyst & 06/2019 & 04/2022 \\
+    \multicolumn{3}{l}{\textit{Vitznau, Switzerland}}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{X}
+\vspace{-18pt}
+    \begin{itemize}
+        \setlength\itemsep{-2pt}
+        \item design+implement 3 quant trading strategies (FX, commodity, equity) for a USD10m portfolio;
+        \item internally publish 6 academic and industry-grade research pieces; 
+        \item design and maintain SQL database for internal purposes;
+        \item support the Asset management department in quantitative research.
+    \end{itemize}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{L R{0.3} l@{ -- }R{0.07}}    
+    Kraus Partner Investment Solutions & Quantitative analyst & 02/2016 & 05/2019 \\
+    \multicolumn{3}{l}{\textit{Zurich, Switzerland}}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{X}
+\vspace{-18pt}
+    \begin{itemize}
+        \setlength\itemsep{-2pt}
+        \item develop+improve econometric models for financial forecasting;
+        \item own daily maintenance of two corporate products;
+        \item execute transition from a MATLAB-, Excel- and VBA-based environment to a Python-based one.
+    \end{itemize}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{L R{0.3} l@{ -- }R{0.07}}
+    Third Year & Quantitative research analyst & 10/2015 & 02/2016 \\
+    \multicolumn{3}{l}{\textit{Munich, Germany}}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{X}
+\vspace{-18pt}
+    \begin{itemize}
+        \setlength\itemsep{-2pt}
+        \item design+implement a nowcasting engine for low-frequency macroeconomic data;
+    \end{itemize}
+\end{tabularx}
+
+% EDUCATION -----------------------------------------------------------------
+% \vspace{10pt}
+\begin{tabularx}{\textwidth}{X l@{ -- }r}
+    EDUCATION \\
+    \midrule \\[-10pt]
+
+    Ph.D. in Economics and Finance & 2014 & 2019 \\
+    \textit{University of St. Gallen} & \multicolumn{2}{r}{ } \\
+    (GPA 5.25/6.00) \\[6pt]
+
+    Visiting scholar (host: Robert Engle) & \multicolumn{2}{r}{2018} \\
+    \textit{New York University Stern School of Business} & \multicolumn{2}{r}{ } \\[6pt]
+
+    % \begin{itemize}
+    %     \setlength\itemsep{-2pt}
+    %     % \item The Volatility Lab project on option-implied volatility indexes of FX portfolios.
+    % \end{itemize} \\[-2pt]
+
+    M.A. in Banking and Finance & 2011 & 2014 \\
+    \textit{University of St. Gallen} & \multicolumn{2}{r}{ } \\
+    (GPA 5.23/6.00) \\[6pt]
+
+
+    B.S. in International Economic Relations & 2008 & 2011 \\
+    \textit{Moscow State Institute of International Relations} & \multicolumn{2}{r}{ } \\
+    (GPA 5.0/5.0)
+
+\end{tabularx}
+
+% \pagebreak
+% OTHER ---------------------------------------------------------------------
+% \vspace{10pt}
+\begin{tabularx}{\textwidth}{L R{0.3} l@{ -- }R{0.07}}
+    \multicolumn{3}{l}{OTHER EXPERIENCE} \\
+    \midrule \\[-10pt]
+    University of Zurich (UZH) & Guest lecturer & 09/2020 & present \\
+    \multicolumn{3}{l}{\textit{Zurich, Switzerland}}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{X}
+\vspace{-18pt}
+    \begin{itemize}
+        \setlength\itemsep{-2pt}
+        \item design+teach course ``Digital Tools for Finance'' (\href{https://github.com/ipozdeev/digital-tools-for-finance}{link}).
+    \end{itemize}
+\end{tabularx}
+
+\vspace{-6pt}
+
+\begin{tabularx}{\textwidth}{L R{0.3} l@{ -- }R{0.07}}
+    Swiss Institute of Banking and Finance & Research assistant & 04/2014 & 12/2018 \\
+    \multicolumn{3}{l}{\textit{St. Gallen, Switzerland}}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{X}
+\vspace{-18pt}
+    \begin{itemize}
+        \setlength\itemsep{-2pt}
+        % \item maintained financial and economic data from vendors and public sources;
+        \item tutor Financial econometrics, Theory of finance, Introduction to Julia programming.
+    \end{itemize}
+\end{tabularx}
+
+
+% SKILLS --------------------------------------------------------------------
+\vspace{6pt}
+\noindent \begin{tabularx}{\textwidth}{W{0.25}X}
+    KNOWLEDGE \& SKILLS & \\
+    \midrule \\[-10pt]
+    Programming & 
+        OOP, 
+        testing, 
+        optimization, 
+        web scraping, 
+        databases, 
+        RegEx, 
+        visualization
+        \\[.5ex]
+    Data science & 
+        linear models,
+        neural nets, 
+        tree-based models
+        \\[.5ex]
+    Project management & 
+        version control, Slack, Jira, Wiki
+        \\[.5ex]
+    Text & 
+        plain documents/beamer presentations with MS Office and \LaTeX,
+        markdown
+        \\[.5ex]
+    Finance & 
+        portfolio theory, 
+        asset pricing, 
+        fixed income, 
+        FX, 
+        options,
+        trading strategies, 
+        risk management
+        \\[.5ex]
+    Financial econometrics & 
+        time series analysis, 
+        volatility modeling,
+        backtesting, 
+        nowcasting 
+        \\[.5ex]
+    LLM prompting & 
+        idea generation, code translation, research assistance
+\end{tabularx}
+
+
+% PROGRAMMING EXPERIENCE ----------------------------------------------------
+\vspace{14pt}
+\noindent \begin{tabularx}{\textwidth}{W{0.366} R{0.1} W{0.01} X R{0.1}}
+    PROGRAMMING \\
+    \midrule \\[-10pt]
+    Python (+NumPy, pandas, matplotlib, selenium, pytorch) & 8 years & & SQL (+sqlalchemy) & 5 years \\[.4ex]
+    R (+Shiny) & 5-7 years & & HTML+CSS, \LaTeX, markdown & 1-5 years \\[.4ex]
+    Julia (+JUMP) & 3 years
+\end{tabularx}
+
+
+% WORKING PAPERS ------------------------------------------------------------
+\vspace{12pt}
+\begin{tabularx}{\textwidth}{L r}
+    RESEARCH & \\
+    \midrule \\[-10pt]
+
+    FX option markets ahead of the russian invasion into ukraine & 2022 \\
+    (\href{https://github.com/ipozdeev/fx-options-ukraine-war}{paper/.ipynb}) & \\[6pt]
+
+    FX strategies in cryptocurrency space & 2021 \\
+    (\href{https://github.com/ipozdeev/crypto-fx-strategies}{paper/.ipynb}) & \\[6pt]
+
+    Exchange rates and surprise monetary policy announcements at the onset of COVID19 & 2020 \\
+    (\href{https://github.com/ipozdeev/mp-fx-covid19}{paper/.ipynb}) & \\[6pt]
+
+    Variance risk on the FX market & 2018 \\
+    (\href{http://igorpozdeev.me/files/pozdeev_2018_fx_variance.pdf}{pdf}, 
+    \href{https://github.com/ipozdeev/variance-risk-fx-markets}{code/.ipynb}) & \\[6pt]
+
+    Monetary policy and currency returns: the foresight saga & 2018 \\
+    (with Dmitry Borisenko) & \\
+    (\href{https://ssrn.com/abstract=2983043}{pdf}) \\
+    \textit{26th Finance forum Best paper in fixed income 2018} \\ 
+    \textit{10th FIW research conference Best paper 2017} \\[6pt]
+
+    Verbal interventions and exchange rate policies: the case of Swiss franc cap & 2018 \\
+    (with Nikola Mirkov and Paul S\"oderlind) & \\
+    \textit{Journal of International Money and Finance} & \\
+    (\href{https://ssrn.com/abstract=2804570}{pdf}) & \\[6pt]
+
+    Overnight index swap rates as forecasts of monetary policy & 2017 \\
+    (with Dmitry Borisenko) & \\ 
+    \textit{available on request} & \\
+       
+\end{tabularx}
+
+\pagebreak
+
+% % PROGRAMMING --------------------------------------------------------------
+% \vspace{18pt}
+% \noindent \begin{tabularx}{\textwidth}{lX}
+%     COMPUTER SKILLS & \\
+%     \midrule \\[-10pt]
+%     Topics: & Statistics, optimization, machine learning, data visualization, web scraping \\
+%     Languages/software: & Python, R, MATLAB, Julia, VBA, gretl, STATA, EViews \\
+%     Databases: & SQL \\
+%     Text: & $LaTeX$, MS Office \\
+%     Extras: & version control (Git, Subversion), project coordination (Slack), documentation (Sphynx, Wiki)
+% \end{tabularx}
+
+
+% % HONORS --------------------------------------------------------------------
+% \vspace{18pt}
+% \begin{tabularx}{\textwidth}{L r}
+
+%     ACADEMIC AWARDS & \\
+%     \midrule \\[-10pt]
+%     \textsuperscript{1}26th Finance forum Best paper in fixed income & 2018 \\[.4ex]
+%     \textsuperscript{1}10th FIW research conference Best paper & 2017 \\[.4ex]
+%     SFI Best discussant doctoral award & 2017 \\
+
+% \end{tabularx}
+
+
+% % TALKS ---------------------------------------------------------------------
+% \vspace{12pt}
+% \begin{tabularx}{\textwidth}{L r}
+    
+%     TALKS & \\
+%     \midrule \\[-10pt]
+%     \multicolumn{2}{l}{``Variance risk on the FX market''( prev. ``Option-implied betas of currency returns'')}\\[4pt]
+
+%     SFI Research days (Gerzensee, Switzerland), 24th Forecasting financial markets conference (Liverpool, UK), Research seminar (St. Gallen, Switzerland) & 2017 \\[24pt]
+
+%     \multicolumn{2}{l}{``Monetary policy and currency returns: the foresight saga''} \\[4pt]
+
+%     FMA European conference (Kristiansand, Norway), EFMA Annual conference (Milan, Italy), 26th Finance forum (Santander, Spain), NYU student seminar (New York, USA) & 2018 \\[16pt]
+
+%     10th FIW research conference (Vienna, Austria), 30th Australasian finance and banking conference (Sydney, Australia), 7th Auckland finance meeting (Queenstown, New Zealand), 
+%     Paris financial management conference* (Paris, France) & 2017 \\[36pt]
+
+%     \multicolumn{2}{l}{``Verbal interventions and exchange rate policies: the case of Swiss franc cap''} \\[4pt]
+
+%     Swiss macro-finance workshop (Zurich, Switzerland), 5th Workshop on financial determinants of exchange rates* (Zurich, Switzerland) & 2016 \\
+
+%     \rule{110pt}{0.4pt}
+
+%     {\small *presented by a coauthor } & 
+
+% \end{tabularx}
+
+
+% % TEACHING ------------------------------------------------------------------
+% \vspace{18pt}
+% \noindent \begin{tabularx}{\textwidth}{L r}
+    
+%     TEACHING & \\
+%     \midrule \\[-10pt]
+%     Financial econometrics (TA) & 2014 -- present \\[3pt]
+%     Introduction to Julia (TA) & 2017 \\
+% \end{tabularx}
+
+
+% LANGUAGES ----------------------------------------------------------------
+\vspace{18pt}
+\noindent \begin{tabularx}{\textwidth}{L r}
+    LANGUAGES & \\
+    \midrule \\[-10pt]
+    Russian (fluent), English (fluent), German (fluent), French (conversational) & \\
+\end{tabularx}
+
+
+% HOBBIES ------------------------------------------------------------------
+\vspace{18pt}
+\noindent \begin{tabularx}{\textwidth}{L}
+    HOBBIES \\
+    \midrule \\[-10pt]
+    Cinema (volunteer at the Zurich Film Festival 2019--2021) \\
+    Music (volunteer at the Verbier festival 2021, maintain \href{https://github.com/ipozdeev/concertscrape}{a calendar of classical livestreams}) \\
+    Science (take online science courses, certificates verifiable under ``Licenses \& certifications'' on LinkedIn) \\
+    Sports (coached kickboxing at the University of St. Gallen)
+\end{tabularx}
+
+\end{document}
